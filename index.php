@@ -5,7 +5,7 @@
     <title>Document</title>
     
     <!-- Эти файл стилей необходим для работы шаблона, не удаляем его -->
-    <link rel="stylesheet" href="css/uikit.min.css">
+    <link rel="stylesheet" href="uikit.min.css">
 </head>
 <body class="uk-background-muted uk-padding">
     <div class="uk-container uk-card uk-card-body uk-padding uk-container-small uk-background-default uk-margin-bottom">
