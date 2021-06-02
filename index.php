@@ -11,7 +11,7 @@
     <div class="uk-container uk-card uk-card-body uk-padding uk-container-small uk-background-default uk-margin-bottom">
         <h1>Регистрация на сайте </h1>
         <p>
-            Мы рады, что Вы решили зарегистрироваться на нашем сайте. Пожалуйста, заполните анкету.
+            Мы рады, что Вы решили початиться на нашем сайте. Пожалуйста, заполните анкету.
         </p>
 
         <!-- Здесь нужно выводить сообщения об ошибке -->
@@ -22,10 +22,10 @@
         
         <!-- Форма для регистрации -->
         <form>
-            <label> имя<strong class="uk-text-danger">(обязательно)</strong></label>
-            <input type="text" name='email' class="uk-input"  >
-            <label>тексттттт <strong class="uk-text-danger">(обязательно)</strong></label>
-            <input type="text"  name='pass' class="uk-input" >
+            <label> текст<strong class="uk-text-danger">(обязательно)</strong></label>
+            <input type="text" name='text' class="uk-input"  >
+            <label>никнейм <strong class="uk-text-danger">(обязательно)</strong></label>
+            <input type="text"  name='name' class="uk-input" >
             
             <input type="submit" class="uk-input">
         </form>
@@ -38,15 +38,17 @@
     <a class="uk-alert-close" uk-close></a>
     <p><?php 
 
-    $pass=$_GET['pass'];
+    $pass=$_GET['text'];
 
-    $email = $_GET['email'];
+    $email = $_GET['name'];
 
     $fail = fopen("text.txt",'a+');
     $t = date("d.m.y.h.m");
     if (isset($fail)){
-
-        fwrite($fail,"$pass :$t  $email".PHP_EOL);
+        if (str_len($pass)>0) && (str_len($email)>0){
+            
+            fwrite($fail,"$pass :$t  $email".PHP_EOL);
+        }
 
 
     }
