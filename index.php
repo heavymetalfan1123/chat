@@ -9,7 +9,7 @@
 </head>
 <body class="uk-background-muted uk-padding">
     <div class="uk-container uk-card uk-card-body uk-padding uk-container-small uk-background-default uk-margin-bottom">
-        <h1>Регистрация на сайте </h1>
+        <h1>чатик</h1>
         <p>
             Мы рады, что Вы решили початиться на нашем сайте. Пожалуйста, заполните анкету.
         </p>
@@ -45,7 +45,7 @@
     $fail = fopen("text.txt",'a+');
     $t = date("d.m.y.h.m");
     if (isset($fail)){
-        if (str_len($pass)>0 && str_len($email)>0){
+        if (strlen($pass)>0 && strlen($email)>0){
             
             fwrite($fail,"$pass :$t  $email".PHP_EOL);
         }
