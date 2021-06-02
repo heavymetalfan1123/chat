@@ -34,7 +34,7 @@
     
     
     <!-- Здесь выводим результат регистрации -->
-    <div class="uk-alert-primary" uk-alert>
+    <div class="uk-container uk-card uk-card-body uk-padding uk-container-small uk-background-default uk-margin-bottom">
     <a class="uk-alert-close" uk-close></a>
     <p><?php 
 
